@@ -19,8 +19,12 @@ search.addEventListener("click", (e) => {
 
             if (json.cod === "404") {
                 notFound.style.display = "block";
-                weatherBox.style.display = "none";
-                weatherDetails.style.display = "none";
+                weatherBox.style.opacity = "0";
+                weatherDetails.style.opacity = "0";
+            }else {
+                notFound.style.display = "none";
+                weatherBox.style.opacity = "1";
+                weatherDetails.style.opacity = "1";
             }
 
             const image = document.querySelector(".weather-box img");
